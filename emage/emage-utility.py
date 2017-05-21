@@ -1,4 +1,4 @@
-from __init__ import encrypt, decrypt
+from .__init__ import encrypt, decrypt
 import getpass, argparse
 
 parser = argparse.ArgumentParser(description='Encrypt or decrypt a message using Emage')
@@ -16,7 +16,7 @@ if args.encrypt:
     if args.message is not None:
         message = args.message
     else:
-        message = input('Message: ')
+        message = eval(input('Message: '))
 
     # Check if password was entered via
     # argument or needs to be queried
@@ -45,7 +45,7 @@ elif args.decrypt:
     else:
         password = getpass.getpass(prompt='Password: ')
     # Decrypt the file.
-    print(decrypt(args.file, password))
+    print((decrypt(args.file, password)))
 else:
     print('Please enter a mode!')
     print('emage-utility --encrypt --file=./file.png')

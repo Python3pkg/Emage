@@ -13,12 +13,12 @@ try:
         encrypt('penguins.png', password, message)
         decryptedMessage = decrypt('penguins.png', password).decode('utf_8')
         if decryptedMessage == message:
-            print('Test Passed => ' + message)
+            print(('Test Passed => ' + message))
         else:
             print('Test Failed:')
-            print('Password: ' + password)
-            print('Message: ' + message)
-            print('Returned Message: ' + decryptedMessage)
+            print(('Password: ' + password))
+            print(('Message: ' + message))
+            print(('Returned Message: ' + decryptedMessage))
             time.sleep(10)
         currentTest += 1
 except:
